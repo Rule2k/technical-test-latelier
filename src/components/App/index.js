@@ -8,6 +8,7 @@ import React from 'react';
  */
 import Player from 'src/components/Player';
 import Loading from 'src/components/Loading';
+import PropTypes from 'prop-types';
 import './app.scss';
 
 /**
@@ -36,7 +37,15 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  loadingApp: PropTypes.func.isRequired,
+  players: PropTypes.array,
+  loading: PropTypes.bool.isRequired,
+};
 
+App.defaultProps = {
+  players: [],
+};
 /**
  * Export
  */
