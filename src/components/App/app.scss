@@ -1,6 +1,9 @@
 #app {
   padding: 2em;
-  text-align: center;
+  margin: auto;
   display: flex;
   flex-direction: row;
+  & div:nth-child(2) {
+    border-left: 2pt solid white;
+  }
 }

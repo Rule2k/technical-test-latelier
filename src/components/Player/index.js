@@ -5,17 +5,19 @@ import './player.scss';
 
 const Player = ({ player }) => (
   <div className="player">
-    <p>Firstname : {player.firstname}</p>
-    <p>Lastname : {player.lastname}</p>
-    <p>Shortname : {player.shortname}</p>
-    <p>Sex : {player.sex}</p>
-    <img src={player.country.picture} alt={player.country.code} />
-    <img src={player.picture} alt="player" />
-    <p>rank: {player.data.rank}</p>
-    <p>points: {player.data.points}</p>
-    <p>weight: {player.data.weight / 1000} kg</p>
-    <p>height: {player.data.height} cm</p>
-    <p>age: {player.data.age} ans</p>
+    <div className="pictures">
+      <img className="picture" src={player.picture} alt="player" />
+      <img className="country" src={player.country.picture} alt={player.country.code} />
+    </div>
+    <p className="firstname"><span>Firstname :</span> {player.firstname}</p>
+    <p className="lastname"><span>Lastname :</span> {player.lastname}</p>
+    <p className="shortname"><span>Shortname :</span> {player.shortname}</p>
+    <p className="sex"><span>Sex :</span> {player.sex}</p>
+    <p className="rank"><span>Rank: </span> {player.data.rank}</p>
+    <p className="points"><span>Points: </span> {player.data.points}</p>
+    <p className="weight"><span>Weight: </span> {player.data.weight / 1000} kg</p>
+    <p className="height"><span>Height: </span> {player.data.height} cm</p>
+    <p className="age"><span>Age: </span> {player.data.age} ans</p>
   </div>
 );
 
