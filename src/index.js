@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
  * import : local
  */
 import store from 'src/store';
-import App from 'src/components/App';
+import App from 'src/containers/App';
 import { loadingApp } from 'src/store/reducer';
 
 
@@ -22,4 +22,3 @@ const target = document.getElementById('root');
 // 1 - Le composant à rendre
 // 2 - La cible dans le DOM
 render(rootComponent, target);
-store.dispatch(loadingApp());

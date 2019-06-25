@@ -15,7 +15,7 @@ const middleware = store => next => (action) => {
         .catch((error) => {
           console.log(error);
         });
-    break;
+      break;
     default:
       next(action);
   }
