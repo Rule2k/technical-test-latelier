@@ -6,14 +6,14 @@ import React from 'react';
 /**
  * Local import
  */
-import Example from 'src/containers/Example';
+import Player from 'src/components/Player';
 import './app.scss';
 
 /**
  * Code
  */
 const App = () => (
-  <Example />
+  <Player />
 );
 
 /**
