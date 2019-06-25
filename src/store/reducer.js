@@ -2,14 +2,15 @@
  * Initial State
  */
 const initialState = {
-  message: 'Hello',
-  clic: 0,
+  data: '',
 };
 
 /**
  * Types
  */
-const DO_SOMETHING = 'DO_SOMETHING';
+
+export const LOADING_APP = 'LOADING_APP';
+const DATA_RECEIVED = 'DATA_RECEIVED';
 
 /**
  * Traitements
@@ -20,10 +21,10 @@ const DO_SOMETHING = 'DO_SOMETHING';
  */
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DO_SOMETHING:
+    case DATA_RECEIVED:
       return {
         ...state,
-        clic: state.clic + 1,
+        data: action.data,
       };
 
     default:
@@ -34,8 +35,14 @@ const reducer = (state = initialState, action = {}) => {
 /**
  * Action Creators
  */
-export const doSomething = () => ({
-  type: DO_SOMETHING,
+
+export const loadingApp = () => ({
+  type: LOADING_APP,
+});
+
+export const dataReceived = data => ({
+  type: DATA_RECEIVED,
+  data,
 });
 
 /**

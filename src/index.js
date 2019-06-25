@@ -10,6 +10,8 @@ import { Provider } from 'react-redux';
  */
 import store from 'src/store';
 import App from 'src/components/App';
+import { loadingApp } from 'src/store/reducer';
+
 
 /**
  * Render - Rendu d'un composant React dans le DOM
@@ -20,3 +22,4 @@ const target = document.getElementById('root');
 // 1 - Le composant à rendre
 // 2 - La cible dans le DOM
 render(rootComponent, target);
+store.dispatch(loadingApp());

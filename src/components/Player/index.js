@@ -19,9 +19,6 @@ const Player = () => (
 );
 
 Player.propTypes = {
-  clic: PropsTypes.number.isRequired,
-  message: PropsTypes.string.isRequired,
-  doSomething: PropsTypes.func.isRequired,
 };
 
 export default Player;
